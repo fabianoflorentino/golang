@@ -8,8 +8,6 @@ LABEL image version="v0.1"
 
 RUN apk --no-cache update \
     && apk --no-cache upgrade \
-    && pip install --upgrade pip \
-    && pip install -r requirements.txt --no-cache-dir \
     && rm -vrf /var/cache/apk/* \
     && adduser --disabled-password --gecos "" golang
 
