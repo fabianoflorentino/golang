@@ -1,5 +1,5 @@
 ---
-name: BUILD IMAGE PYTHON 3.11
+name: BUILD IMAGE GOLANG 1.18
 
 on:
   push:
@@ -26,11 +26,11 @@ jobs:
       - name: Login
         run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # Build the image (Python 3.11)
-      - name: Build Image (Python 3.11)
+      # Build the image (Golang 1.18)
+      - name: Build Image (Golang 1.18)
         run: |
-          docker build --no-cache --rm -t $GITHUB_REPOSITORY:3.11 -f ./Dockerfile .
+          docker build --no-cache --rm -t $GITHUB_REPOSITORY:1.18 -f ./Dockerfile .
       
-      # Push the image to Docker Hub (Python 3.11)
+      # Push the image to Docker Hub (Golang 1.18)
       - name: Push Version
-        run: docker push $GITHUB_REPOSITORY:3.11
+        run: docker push $GITHUB_REPOSITORY:1.18
