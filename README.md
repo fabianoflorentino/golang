@@ -1,3 +1,4 @@
+[![BUILD IMAGE GOLANG 1.18](https://github.com/fabianoflorentino/golang/actions/workflows/build.yml/badge.svg)](https://github.com/fabianoflorentino/golang/actions/workflows/build.yml)
 # A container image for run Golang 3.11
 
 ## **Usage**
